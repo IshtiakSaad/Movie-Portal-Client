@@ -9,12 +9,13 @@ const App = () => {
       {/* Navbar */}
       <Navbar />
 
-      {/* Page Content */}
       <main className="flex-grow">
-        <Outlet /> {/* Placeholder for nested routes */}
+        <Outlet />
       </main>
+
+      <ToastContainer />
+
       {/* Footer */}
-      <ToastContainer/>
       <Footer />
     </div>
   );
