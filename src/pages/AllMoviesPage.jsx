@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const AllMoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState(""); 
+  const [searchQuery, setSearchQuery] = useState(""); // New state for search query
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const AllMoviesPage = () => {
         if (!response.ok) throw new Error("Failed to fetch movies.");
         const data = await response.json();
         setMovies(data);
-        setFilteredMovies(data); 
+        setFilteredMovies(data); // Initially, set filteredMovies to all movies
       } catch (error) {
         console.error("Error fetching movies:", error);
       } finally {
@@ -26,10 +26,12 @@ const AllMoviesPage = () => {
     fetchMovies();
   }, []);
 
+  // Handle search query change
   const handleSearchChange = (e) => {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
 
+    // Filter movies based on the title matching the search query
     const filtered = movies.filter((movie) =>
       movie.title.toLowerCase().includes(query)
     );
@@ -40,7 +42,9 @@ const AllMoviesPage = () => {
     return (
       <div className="flex items-center justify-center h-screen">
         <div className="flex flex-col items-center">
+          {/* Spinner */}
           <div className="w-16 h-16 border-4 border-indigo-500 border-t-transparent border-solid rounded-full animate-spin"></div>
+          {/* Loading Text */}
           <p className="text-lg text-gray-600 mt-4">Loading movies...</p>
         </div>
       </div>
@@ -94,6 +98,7 @@ const AllMoviesPage = () => {
                 <p className="text-gray-600 text-sm">
                   Rating: ⭐ {movie.rating}/10
                 </p>
+                {/* Overlay for Details Button */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-60 transition-all duration-300"></div>
 
                 <button
