@@ -20,7 +20,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />, // Main layout (Navbar, Footer)
+    element: <App />, 
     children: [
       {
         index: true,
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
             <HomePage />
           </ThemeProvider>
         ),
-      }, // Default route
+      }, 
       { path: "login", element: <LoginPage /> },
       { path: "register", element: <RegisterPage /> },
       { path: "forgot-password", element: <ForgotPasswordPage /> },
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <NotFoundPage />, // Catch-all route for 404
+    element: <NotFoundPage />, 
   },
 ]);
 

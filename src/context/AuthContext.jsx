@@ -12,32 +12,33 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
-
         const userData = {
           uid: currentUser.uid,
           email: currentUser.email,
-          displayName: currentUser.displayName || "Anonymous", 
+          displayName: currentUser.displayName || "Anonymous",
           photoURL: currentUser.photoURL || "",
         };
-
+  
         try {
-          await addUserToDatabase(userData); 
-          console.log("User synced with database successfully.");
+          await addUserToDatabase(userData);
+          console.log("User synced with database.");
         } catch (error) {
           console.error("Error syncing user with database:", error);
         }
       }
-
+  
+      console.log("Setting user:", currentUser); // Debug
       setUser(currentUser); 
-      setLoading(false); 
+      setLoading(false);
     });
-
+  
     return () => unsubscribe();
   }, []);
+  
 
-  const logout = async () => {
-    await signOut(auth);
-    setUser(null); 
+  const logout =  () => {
+    setLoading(true);
+    return signOut(auth);
   };
 
   return (

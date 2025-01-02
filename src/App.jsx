@@ -6,7 +6,6 @@ import { ToastContainer } from "react-toastify";
 const App = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navbar */}
       <Navbar />
 
       <main className="flex-grow">
@@ -15,7 +14,6 @@ const App = () => {
 
       <ToastContainer />
 
-      {/* Footer */}
       <Footer />
     </div>
   );

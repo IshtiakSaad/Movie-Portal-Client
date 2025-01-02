@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import MovieForm from "../components/MovieForm";
 
 const UpdateMoviePage = () => {
-  const { id } = useParams(); // Extract movie ID from URL
+  const { id } = useParams(); 
   const navigate = useNavigate();
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);

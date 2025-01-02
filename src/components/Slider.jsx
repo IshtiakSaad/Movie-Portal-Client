@@ -48,12 +48,12 @@ const Slider = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
 
         {/* Content Section */}
-        <div className="container mx-auto px-6 py-40 text-center text-white relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg transform hover:scale-105 transition duration-500">
+        <div className="container mx-auto px-6 py-20 lg:py-40 text-center text-white relative z-10">
+          <h1 className="text-4xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg transform hover:scale-105 transition duration-500">
             Discover Your Next Favorite Movie
           </h1>
-          <h2 className="text-4xl font-semibold mb-6 text-shadow-md">{slides[currentSlide].title}</h2>
-          <p className="text-lg max-w-3xl mx-auto mb-10 opacity-80 text-shadow-lg">
+          <h2 className="text-2xl lg:text-4xl font-semibold mb-6 text-shadow-md">{slides[currentSlide].title}</h2>
+          <p className="lg:text-lg max-w-3xl mx-auto mb-10 opacity-80 text-shadow-lg">
             {slides[currentSlide].description}
           </p>
 
@@ -61,15 +61,15 @@ const Slider = () => {
           <div className="flex justify-center gap-8 mt-6">
             <button
               onClick={handlePrev}
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xl px-8 py-2 rounded-full shadow-lg transform hover:scale-105 transition duration-300"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xl px-4 rounded-full shadow-lg transform hover:scale-105 transition duration-300"
             >
-              &#8592; Previous
+              &#8592;
             </button>
             <button
               onClick={handleNext}
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xl px-8 py-2 rounded-full shadow-lg transform hover:scale-105 transition duration-300"
+              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xl px-4 rounded-full shadow-lg transform hover:scale-105 transition duration-300"
             >
-              Next &#8594;
+             &#8594;
             </button>
           </div>
         </div>
