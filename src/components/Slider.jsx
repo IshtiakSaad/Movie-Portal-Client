@@ -58,18 +58,18 @@ const Slider = () => {
           </p>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-center gap-8 mt-6">
+          <div className="join flex justify-center mt-6">
             <button
               onClick={handlePrev}
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xl px-4 rounded-full shadow-lg transform hover:scale-105 transition duration-300"
+              className="join-item btn btn-outline btn-accent rounded-lg px-6 shadow-lg"
             >
-              &#8592;
+              «
             </button>
             <button
               onClick={handleNext}
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xl px-4 rounded-full shadow-lg transform hover:scale-105 transition duration-300"
+              className="join-item btn btn-outline btn-accent rounded-lg px-6 shadow-lg"
             >
-             &#8594;
+             »
             </button>
           </div>
         </div>
