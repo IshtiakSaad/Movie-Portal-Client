@@ -1,4 +1,4 @@
-# MoviePortal 🎥
+# MoviePortal 
 
 Welcome to **MoviePortal**, your one-stop destination for exploring, managing, and sharing your favorite movies. From adding new movies to building your personalized list of favorites, MoviePortal offers a seamless movie management experience for movie enthusiasts.
 
@@ -29,7 +29,7 @@ Welcome to **MoviePortal**, your one-stop destination for exploring, managing, a
 
 ---
 
-## 🚀 **Tech Stack**
+##  **Tech Stack**
 - **Frontend**: React, React Router, TailwindCSS
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
@@ -38,22 +38,13 @@ Welcome to **MoviePortal**, your one-stop destination for exploring, managing, a
 
 ---
 
-## 🛠 **Getting Started**
+##  **Getting Started**
 To get a local copy up and running, follow these steps:
 
-### Prerequisites
+### Dependencies
 - Node.js installed
 - MongoDB server running locally or remotely
 - Firebase project configured
-
----
-
-## 💻 **Screenshots**
-### Home Page
-![Home Page](https://via.placeholder.com/800x400)
-
-### Favorites Page
-![Favorites Page](https://via.placeholder.com/800x400)
 
 ---
 
