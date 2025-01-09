@@ -27,7 +27,6 @@ export const AuthProvider = ({ children }) => {
         }
       }
   
-      console.log("Setting user:", currentUser); // Debug
       setUser(currentUser); 
       setLoading(false);
     });

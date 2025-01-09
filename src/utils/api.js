@@ -1,6 +1,5 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://movie-server-vercel.vercel.app";
 
-// Add or update a user in the database
 export const addUserToDatabase = async (user) => {
     try {
         const response = await fetch(`${BASE_URL}/users`, {
@@ -16,7 +15,7 @@ export const addUserToDatabase = async (user) => {
             throw new Error(errorData.error || "Failed to add/update user.");
         }
 
-        return await response.json(); // Return success message or other response data
+        return await response.json(); 
     } catch (error) {
         console.error("Error adding/updating user:", error);
         throw error;

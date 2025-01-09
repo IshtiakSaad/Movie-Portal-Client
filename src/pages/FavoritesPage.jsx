@@ -6,7 +6,7 @@ const FavoritesPage = () => {
 
   useEffect(() => {
     const fetchFavorites = async () => {
-      const response = await fetch("http://localhost:5000/api/favorites");
+      const response = await fetch("http://movie-server-vercel.vercel.app/api/favorites");
       const data = await response.json();
       setFavorites(data);
     };
@@ -14,7 +14,7 @@ const FavoritesPage = () => {
   }, []);
 
   const handleRemoveFavorite = async (id) => {
-    const response = await fetch(`http://localhost:5000/api/favorites/${id}`, {
+    const response = await fetch(`http://movie-server-vercel.vercel.app/api/favorites/${id}`, {
       method: "DELETE",
     });
     if (response.ok) {

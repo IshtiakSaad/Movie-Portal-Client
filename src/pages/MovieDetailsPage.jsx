@@ -16,7 +16,7 @@ const MovieDetailsPage = () => {
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/movies/${id}`);
+        const response = await fetch(`http://movie-server-vercel.vercel.app/movies/${id}`);
         if (!response.ok) throw new Error("Failed to fetch movie details");
         const data = await response.json();
         setMovie(data);
@@ -38,7 +38,7 @@ const MovieDetailsPage = () => {
     if (!confirmDelete) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/movies/${id}`, {
+      const response = await fetch(`http://movie-server-vercel.vercel.app/movies/${id}`, {
         method: "DELETE",
       });
 
@@ -63,7 +63,7 @@ const MovieDetailsPage = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/users/${user.uid}/favorites`,
+        `http://movie-server-vercel.vercel.app/users/${user.uid}/favorites`,
         {
           method: "POST",
           headers: {

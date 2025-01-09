@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const AllMoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState(""); // New state for search query
+  const [searchQuery, setSearchQuery] = useState(""); 
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await fetch("http://localhost:5000/movies");
+        const response = await fetch("http://movie-server-vercel.vercel.app/movies");
         if (!response.ok) throw new Error("Failed to fetch movies.");
         const data = await response.json();
         setMovies(data);
-        setFilteredMovies(data); // Initially, set filteredMovies to all movies
+        setFilteredMovies(data); 
       } catch (error) {
         console.error("Error fetching movies:", error);
       } finally {
@@ -26,12 +26,10 @@ const AllMoviesPage = () => {
     fetchMovies();
   }, []);
 
-  // Handle search query change
   const handleSearchChange = (e) => {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
 
-    // Filter movies based on the title matching the search query
     const filtered = movies.filter((movie) =>
       movie.title.toLowerCase().includes(query)
     );

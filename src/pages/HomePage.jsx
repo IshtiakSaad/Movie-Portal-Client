@@ -2,16 +2,15 @@ import FAQ from "../components/FAQ";
 import FeaturedMovies from "../components/FeaturedMovies";
 import ReasonsToJoin from "../components/ReasonsToJoin";
 import Slider from "../components/Slider";
-import { useTheme } from "../context/ThemeContext"; // Import the theme hook
+import { useTheme } from "../context/ThemeContext"; 
 
 const fetchFeaturedMovies = async () => {
-  // Example API call
-  const response = await fetch("http://localhost:5000/movies");
+  const response = await fetch("http://movie-server-vercel.vercel.app/movies");
   return response.json();
 };
 
 const HomePage = () => {
-  const { theme, toggleTheme } = useTheme(); // Use the theme context
+  const { theme, toggleTheme } = useTheme(); 
 
   return (
     <div
