@@ -11,7 +11,7 @@ const AllMoviesPage = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await fetch("http://movie-server-vercel.vercel.app/movies");
+        const response = await fetch("https://movie-server-vercel.vercel.app/movies");
         if (!response.ok) throw new Error("Failed to fetch movies.");
         const data = await response.json();
         setMovies(data);

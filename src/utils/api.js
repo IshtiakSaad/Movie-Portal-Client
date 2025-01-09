@@ -1,4 +1,4 @@
-const BASE_URL = "http://movie-server-vercel.vercel.app";
+const BASE_URL = "https://movie-server-vercel.vercel.app";
 
 export const addUserToDatabase = async (user) => {
     try {

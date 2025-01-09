@@ -5,7 +5,7 @@ const AddMoviePage = () => {
   const navigate = useNavigate();
 
   const handleAddMovie = async (movie) => {
-    const response = await fetch("http://movie-server-vercel.vercel.app/movies", {
+    const response = await fetch("https://movie-server-vercel.vercel.app/movies", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(movie),

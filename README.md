@@ -3,7 +3,7 @@
 Welcome to **MoviePortal**, your one-stop destination for exploring, managing, and sharing your favorite movies. From adding new movies to building your personalized list of favorites, MoviePortal offers a seamless movie management experience for movie enthusiasts.
 
 ### 🌐 **Live Site URL**
-[Visit MoviePortal Here](https://movieportal.live)
+[Visit MoviePortal Here](https://movie-server-0.web.app/)
 
 ---
 

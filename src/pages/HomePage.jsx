@@ -5,7 +5,7 @@ import Slider from "../components/Slider";
 import { useTheme } from "../context/ThemeContext"; 
 
 const fetchFeaturedMovies = async () => {
-  const response = await fetch("http://movie-server-vercel.vercel.app/movies");
+  const response = await fetch("https://movie-server-vercel.vercel.app/movies");
   return response.json();
 };
 
