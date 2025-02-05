@@ -5,6 +5,8 @@ Welcome to **MoviePortal**, your one-stop destination for exploring, managing, a
 ### 🌐 **Live Site URL**
 [Visit MoviePortal Here](https://movie-server-0.web.app/)
 
+- **Technologies Used**: **React**, **Vite**, **TailwindCSS**, **Firebase**, **React Router**, **DaisyUI**, **React Hook Form**, and **ESLint**.
+
 ---
 
 ## 📋 **Features**
@@ -36,15 +38,64 @@ Welcome to **MoviePortal**, your one-stop destination for exploring, managing, a
 - **Authentication**: Firebase Authentication
 - **Hosting**: Netlify (Frontend), Vercel (Backend)
 
+## Dependencies
+
+- **React**: `^18.3.1`
+- **Firebase**: `^11.1.0`
+- **TailwindCSS**: `^3.4.17`
+- **React Router**: `^7.1.0`
+- **React Hook Form**: `^7.54.2`
+- **React Toastify**: `^11.0.2`
+- **DaisyUI**: `^4.12.23`
+- **Vite**: `^6.0.3`
+- **localforage**: `^1.10.0`
+ 
 ---
 
-##  **Getting Started**
-To get a local copy up and running, follow these steps:
+## Running the Project Locally
 
-### Dependencies
-- Node.js installed
-- MongoDB server running locally or remotely
-- Firebase project configured
+### Prerequisites
+
+- **Node.js** (v14 or higher)
+- **npm** (v6 or higher)
+
+### Steps to Run Locally
+
+1. **Clone the Repository**
+   - Open your terminal and run the following command to clone the repository:
+     ```bash
+     git clone https://github.com/your-username/client-side.git
+     ```
+   - Navigate to the project directory:
+     ```bash
+     cd client-side
+     ```
+
+2. **Install Dependencies**
+   - Inside the project folder, run the following command to install the required dependencies:
+     ```bash
+     npm install
+     ```
+
+3. **Set Up Firebase Configuration**
+   - Create a `.env` file in the root of the project and add your Firebase configuration details. Example:
+     ```bash
+     VITE_FIREBASE_API_KEY=your-api-key
+     VITE_FIREBASE_AUTH_DOMAIN=your-auth-domain
+     VITE_FIREBASE_PROJECT_ID=your-project-id
+     VITE_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+     VITE_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+     VITE_FIREBASE_APP_ID=your-app-id
+     ```
+
+4. **Run the Development Server**
+   - Once the dependencies are installed, you can start the development server with the following command:
+     ```bash
+     npm run dev
+     ```
+
+5. **Access the Application**
+   - Open your browser and go to `http://localhost:5173` to see the application running locally.
 
 ---
 
