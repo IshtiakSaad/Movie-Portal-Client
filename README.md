@@ -64,11 +64,11 @@ Welcome to **MoviePortal**, your one-stop destination for exploring, managing, a
 1. **Clone the Repository**
    - Open your terminal and run the following command to clone the repository:
      ```bash
-     git clone https://github.com/your-username/client-side.git
+     git clone https://github.com/IshtiakSaad/Movie-Portal-Client.git
      ```
    - Navigate to the project directory:
      ```bash
-     cd client-side
+     cd Movie-Portal-Client
      ```
 
 2. **Install Dependencies**
